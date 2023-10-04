@@ -4,7 +4,7 @@
 
 # Site
 title: Triccsr's Blog
-subtitle: ''
+subtitle: 'Meow~ ^_^'
 description: ''
 keywords:
 author: triccsr
@@ -123,6 +123,7 @@ search: # Added by me, used for local search, npm install hexo-generator-searchd
   content: true
   format: html
 server: # Added by me, used for cache
+  cache: true
   serveStatic:
     cacheControl: true
     maxAge: 0
