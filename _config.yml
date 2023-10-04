@@ -122,8 +122,7 @@ search: # Added by me, used for local search, npm install hexo-generator-searchd
   field: post
   content: true
   format: html
-server:
+server: # Added by me, used for cache
   serveStatic:
-    cacheControl: false
-    etag: false
-    maxAge: -1
+    cacheControl: true
+    maxAge: 0
