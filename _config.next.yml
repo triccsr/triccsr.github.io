@@ -102,7 +102,7 @@ menu:
   #categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || fa fa-calendar
-  sitemap: /sitemap.xml || fa fa-sitemap
+  #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
@@ -349,10 +349,9 @@ text_align:
 mobile_layout_economy: false
 
 # Browser header panel color.
-theme_color:
-  light: "#222"
-  dark: "#222"
-
+theme_color: # Modified by me
+  light: "#a85e58"
+  dark: "#a85e58"
 # Override browsers' default behavior.
 body_scrollbar:
   # Place the scrollbar over the content.
