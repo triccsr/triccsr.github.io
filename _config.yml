@@ -122,4 +122,3 @@ search: # Added by me, used for local search, npm install hexo-generator-searchd
   field: post
   content: true
   format: html
-
