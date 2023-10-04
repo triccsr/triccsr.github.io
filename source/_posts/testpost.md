@@ -3,7 +3,7 @@ layout: post
 title: TestPost
 date: 2023-09-13 20:15 +0800
 tags: [test]
-
+mathjax: true
 ---
 
 ### CAT
@@ -16,6 +16,13 @@ test enable cache
 dfjkdfjkdfjkdjfkj
 fkkkkkk
 kkkkkkkkk
+$\epsilon_0$
+$$
+\begin{align*}
+    CCC &= 2 \\
+    C &=1 \tag*{$\Box$} \\
+\end{align*}
+$$
 
 
 <!--more-->
