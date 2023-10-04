@@ -123,4 +123,7 @@ search: # Added by me, used for local search, npm install hexo-generator-searchd
   content: true
   format: html
 server:
-  cache: false
+  serveStatic:
+    cacheControl: false
+    etag: false
+    maxAge: -1
