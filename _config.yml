@@ -109,10 +109,17 @@ deploy:
 symbols_count_time: # I add it, needs hexo-word-counter
   symbols: true
 
-sitemap: # I add it, needs npm install hexo-generator-sitemap --save, https://github.com/hexojs/hexo-generator-sitemap
+sitemap: # Added by me, needs npm install hexo-generator-sitemap --save, https://github.com/hexojs/hexo-generator-sitemap
   path: 
     - sitemap.xml
     - sitemap.txt
   rel: false
   tags: true
   categories: false
+
+search: # Added by me, used for local search, npm install hexo-generator-searchdb installed
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
