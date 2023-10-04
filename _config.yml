@@ -53,7 +53,7 @@ highlight:
   exclude_languages: #I add it
     - mermaid
 prismjs:
-  enable: false
+  enable: false # Reversed by me
   preprocess: true
   line_number: true
   tab_replace: ''
