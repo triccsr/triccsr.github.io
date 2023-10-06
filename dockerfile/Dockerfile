@@ -1,3 +1,4 @@
-FROM node_hexo:v0
+FROM node:alpine
 ENV LC_ALL=C.utf8 TZ="Asia/Shanghai"
-RUN date
+RUN date\ 
+&& npm install -g hexo-cli
