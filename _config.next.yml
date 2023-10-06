@@ -561,14 +561,14 @@ math:
   every_page: false
 
   mathjax:
-    enable: true # I enabled it, needs: $ npm un hexo-renderer-marked $ npm i hexo-renderer-pandoc
+    enable: false # I enabled it, needs: $ npm un hexo-renderer-marked $ npm i hexo-renderer-pandoc
     # Available values: none | ams | all
     tags: none
 
   katex:
-    enable: false
+    enable: true
     # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
-    copy_tex: false
+    copy_tex: true
 
 
 # ---------------------------------------------------------------
