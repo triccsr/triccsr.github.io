@@ -158,7 +158,32 @@ VSCode的编译器寻找顺序为MSVC -> GCC on WSL -> MinGW, 所以当电脑上
 
 然后将插入以下内容：
 
-![](/uploads/2023-10-06/image-16.png)
+```json
+{
+    "name": "(gdb) Launch",
+    "type": "cppdbg",
+    "request": "launch",
+    "program": "enter program name, for example ${workspaceFolder}/a.out",
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${fileDirname}",
+    "environment": [],
+    "externalConsole": false,
+    "MIMode": "gdb",
+    "setupCommands": [
+        {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+        },
+        {
+            "description": "Set Disassembly Flavor to Intel",
+            "text": "-gdb-set disassembly-flavor intel",
+            "ignoreFailures": true
+        }
+    ]
+}
+```
 
 其中"program"和"miDebuggerPath"是一定要改的。打开tasks.json，看到 args的-o后面有一行`"${fileDirname}\\${fileBasenameNoExtension}.exe"`，把program后面的内容改成这个。"miDebuggerPath"就是gdb的路径，注意在windows下要使用双反斜杠，最后形如这样：
 
