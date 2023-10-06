@@ -29,7 +29,7 @@ tags: [Visual Studio Code]
 
 
 ## 使用方法
-
+新建文件夹，用vscode打开，之后的所有操作都在该窗口中进行。
 ### C/C++ Configuration
 
 按F1键，显示搜索框，输入C/C++，选择`C/C++: Edit Configurations(UI)`，将会出现新页面C/C++ Configurations，同时.vscode文件夹下出现新文件c_cpp_properties.json。
@@ -82,6 +82,9 @@ VSCode的编译器寻找顺序为MSVC -> GCC on WSL -> MinGW, 所以当电脑上
 我用上述编译器版本测试，即使在C++ standard中选择了c++11，在编译带c++11特性的代码时仍报错，解决方案是在编译参数中加上`-std=c++11`
 {% endnote %}
 
+### 编写代码
+
+没啥说的，在自己创建的文件夹里新建c/c++文件写就完了。
 ### 运行/调试
 
 现在.vscode文件夹下只有c_cpp_properties.json一个文件。
