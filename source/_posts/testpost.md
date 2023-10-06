@@ -5,8 +5,10 @@ date: 2023-09-13 20:15 +0800
 tags: [test]
 katex: true
 ---
+<!--more-->
 
 ### CAT
+
 
 meow
 
@@ -35,7 +37,7 @@ $$
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="bottom"
+        data-input-position="top"
         data-theme="light_high_contrast"
         data-lang="en"
         data-loading="lazy"
