@@ -176,3 +176,20 @@ VSCode的编译器寻找顺序为MSVC -> GCC on WSL -> MinGW, 所以当电脑上
 [C/C++ for Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp)
 
 [Debug C++ in Visual Studio Code](https://code.visualstudio.com/docs/cpp/cpp-debug)
+
+<script src="https://giscus.app/client.js"
+        data-repo="triccsr/triccsr.github.io"
+        data-repo-id="R_kgDOKSkgfw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKSkgf84CZRTI"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light_high_contrast"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
