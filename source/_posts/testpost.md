@@ -28,8 +28,24 @@ $$
 \end{aligned}
 $$
 
+{% note primary %}
+#### Primary Header
+**Welcome** to [Hexo!](https://hexo.io)
+{% endnote %}
 
-<!--more-->
+
+
+<div class="note primary">
+
+## dfdfdf
+
+This is a primary alert—check it out!
+</div>
+
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
 <script src="https://giscus.app/client.js"
         data-repo="triccsr/triccsr.github.io"
         data-repo-id="R_kgDOKSkgfw"

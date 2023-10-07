@@ -5,6 +5,14 @@ tags: [Visual Studio Code]
 
 ---
 
+## 前置条件
+
+- 电脑上有MinGW
+- 电脑上有Visual Studio Code
+- vscode上有Microsoft官方的C/C++插件
+
+<!--more-->
+
 ## 背景
 
 南京大学硕士夏令营机试开始之前，某人打开124机房的古董电脑上的vscode，简单写了个hello world，结果发现VSCode对着`#include <bits/stdc++>`报错"header not found"。(解决方法见下文)
@@ -13,13 +21,6 @@ tags: [Visual Studio Code]
 
 一切都结束之后，某人翻经验贴仓库，发现有相似问题的不只某人一个。
 
-## 前置条件
-
-- 电脑上有MinGW
-- 电脑上有Visual Studio Code
-- vscode上有Microsoft官方的C/C++插件
-
-<!--more-->
 
 ## 测试环境
 
