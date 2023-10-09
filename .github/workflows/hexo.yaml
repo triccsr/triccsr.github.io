@@ -36,6 +36,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
+          fetch-depth: 0 # fix bug that post update time is wrong
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
