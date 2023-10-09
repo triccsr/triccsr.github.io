@@ -8,7 +8,9 @@ subtitle: 'Meow~ ^_^'
 description: ''
 keywords:
 author: triccsr
-language: zh-CN
+language: 
+  - zh-CN
+  - en
 timezone: 'Asia/Shanghai'
 
 # URL
