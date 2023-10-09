@@ -28,6 +28,8 @@ $$
 \end{aligned}
 $$
 
+text update time fix
+
 {% note primary %}
 #### Primary Header
 **Welcome** to [Hexo!](https://hexo.io)
