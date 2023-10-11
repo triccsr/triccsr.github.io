@@ -109,6 +109,8 @@ deploy:
 
 symbols_count_time: # I add it, needs hexo-word-counter
   symbols: true
+  exclude_codeblock: true
+  suffix: "min(s)."
 
 sitemap: # Added by me, needs npm install hexo-generator-sitemap --save, https://github.com/hexojs/hexo-generator-sitemap
   path: 
