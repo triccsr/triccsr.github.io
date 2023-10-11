@@ -35,13 +35,15 @@ tags: [Visual Studio Code]
 
 按F1键，显示搜索框，输入C/C++，选择`C/C++: Edit Configurations(UI)`，将会出现新页面C/C++ Configurations，同时.vscode文件夹下出现新文件c_cpp_properties.json。
 
-以下内容需要修改：
-
 {% note warning %}
 
 使用C/C++ Configurations页面编辑时，不能打开c_cpp_properties.json文件，否则进行的编辑将不被保存。
 
 {% endnote %}
+
+以下内容需要修改：
+
+#### Compiler Path
 
 ![](/uploads/2023-10-06/image-1.png)
 
@@ -54,6 +56,8 @@ tags: [Visual Studio Code]
 
 VSCode的编译器寻找顺序为MSVC -> GCC on WSL -> MinGW, 所以当电脑上有MSVC时默认编译器路径是MSVC路径，这是124机房电脑的vscode不认识`#include <bits/stdc++>`的原因。
 {% endnote %}
+
+#### Compiler Args
 
 ![](/uploads/2023-10-06/image-3.png)
 
@@ -71,9 +75,13 @@ VSCode的编译器寻找顺序为MSVC -> GCC on WSL -> MinGW, 所以当电脑上
 
 其中`-Wconversion`是类型转换警告，`-Wshadow`是变量重名覆盖警告（某人经常犯变量重名错误，因此习惯加上），`-std=c++11`为c++版本。
 
+#### Intellisense Mode
+
 ![](/uploads/2023-10-06/image-4.png)
 
 这个选择windows-gcc-x64。
+
+### C/C++ Version
 
 ![](/uploads/2023-10-06/image-5.png)
 
@@ -121,7 +129,7 @@ VSCode的编译器寻找顺序为MSVC -> GCC on WSL -> MinGW, 所以当电脑上
 
 注意到panel里面还有一个debug console，调试时我们可以在里面输入式子。
 
-如果还不能正常使用，请看下节launch.json。
+如果还不能正常使用，请配置launch.json。
 
 #### launch.json(非必需)
 
