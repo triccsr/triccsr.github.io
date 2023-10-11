@@ -176,10 +176,13 @@ social_icons:
 links_settings:
   icon: fa fa-globe
   # Available values: block | inline
-  layout: block
+  layout: inline
 
 links:
   #Title: https://example.com
+  VCode神仙: https://vcode28629.github.io/
+  消失的dsm: https://igronemyk.github.io/Blog/
+  ubospica: https://www.cnblogs.com/ubospica/
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
