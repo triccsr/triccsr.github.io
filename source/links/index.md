@@ -9,7 +9,7 @@ date: 2023-10-13 00:14:36
 
 [ubospica](https://www.cnblogs.com/ubospica/)
 
-[GGN_2015] (https://blog.csdn.net/ggn_2015)
+[GGN_2015](https://blog.csdn.net/ggn_2015)
 
 [naiiren](https://naiiren.github.io/)
 
