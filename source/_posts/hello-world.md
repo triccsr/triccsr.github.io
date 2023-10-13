@@ -6,51 +6,74 @@ tags: [test]
 katex: true
 ---
 
-# test
+# Hello World
 
 <!--more-->
 
-### CAT
-
-meow
-
-test workflow
-
-test enable cache
-dfjkdfjkdfjkdjfkj
-fkkkkkk
-kkkkkkkkk
-$\epsilon_0$
-$$
-\begin{aligned}
-    CCC &= 2 \\
-    C &=1 \tag*{$\Box$} \\
-\end{aligned}
-$$
-
-text update time fix
-
+## Support alerts
+```js
 {% note primary %}
 
 #### Primary Header
 
 **Welcome** to [Hexo!](https://hexo.io)
+
 {% endnote %}
+``` 
+{% note primary %}
+
+#### Primary Header
+
+**Welcome** to [Hexo!](https://hexo.io)
+
+{% endnote %}
+
+```javascript
+<div class="note primary">
+
+#### Primary
+
+This is a primary alert—check it out!
+
+</div>
+```
 
 <div class="note primary">
 
-## dfdfdf
+#### Primary
 
 This is a primary alert—check it out!
 
 </div>
 
+## Do not support github-flavored-alerts
+
 > [!WARNING]
 > Critical content demanding immediate user attention due to potential risks.
 
+{% note info %}
 
+#### If use `++` to surround texts, underline will be generated.
 
-\+\+dfkjkj\+\+
+```markdown
+++underline++
+```
+
+++underline++
+
+{% endnote %}
+
+{% note info %}
+
+#### For ordinary text `++`, use `\+\+`, or add spaces.
+
+`++underline ++`: ++underline ++
+
+`++ underline++`: ++ underline++
+
+`\+\+underline\+\+`: \+\+underline\+\+
+
+{% endnote %}
 
 <script src="https://giscus.app/client.js"
         data-repo="triccsr/triccsr.github.io"
