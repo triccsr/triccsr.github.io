@@ -1,9 +1,11 @@
 ---
 layout: post
 title: TestPost
-date: 2023-09-13 20:15 +0800
-tags: [test]
+date: '2023-09-13 20:15 +0800'
+tags:
+  - test
 katex: true
+abbrlink: 37d864d8
 ---
 
 # Hello World

@@ -1,8 +1,9 @@
 ---
 title: 使用Visual Studio Code进行C/C++单文件编程（Windows系统）
+tags:
+  - Visual Studio Code
+abbrlink: fe9a715b
 date: 2023-10-06 16:43:09
-tags: [Visual Studio Code]
-
 ---
 
 ## 前置条件
