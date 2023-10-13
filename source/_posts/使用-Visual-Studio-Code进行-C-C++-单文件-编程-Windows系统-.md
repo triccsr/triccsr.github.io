@@ -26,8 +26,8 @@ tags: [Visual Studio Code]
 - Win11 22H2
 - Visual Studio Code 1.83.0
 - 两个版本的C/C++toolchains
-    - DevC++ 5.11自带的MinGW，其中g++版本为4.9.2，gdb版本为7.8.1（为了模拟124机房古董机器的编译器）
-    - msys2 ucrt64 g++ 13.2.0, gdb 13.2 （某人创建文章时自用的版本）
+  - DevC++ 5.11自带的MinGW，其中g++版本为4.9.2，gdb版本为7.8.1（为了模拟124机房古董机器的编译器）
+  - msys2 ucrt64 g++ 13.2.0, gdb 13.2 （某人创建文章时自用的版本）
 
 ## 使用方法
 
