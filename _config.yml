@@ -104,8 +104,8 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-#deploy:
-#  type: ''
+deploy:
+  type: ''
 
 symbols_count_time: # I add it, needs hexo-word-counter
   symbols: true
