@@ -80,8 +80,8 @@ jobs:
       - name: 1. 检查url文件
         uses: actions/checkout@v3
         with:
-        submodules: recursive
-        fetch-depth: 0 # fix bug that post update time is wrong
+          submodules: recursive
+          fetch-depth: 0 # fix bug that post update time is wrong
   
       - name: 2. 安装 Node
         uses: actions/setup-node@v3
