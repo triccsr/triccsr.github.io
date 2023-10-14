@@ -12,6 +12,8 @@ abbrlink: 37d864d8
 
 <!--more-->
 
+test autopush update time
+
 ## Support alerts
 ```js
 {% note primary %}

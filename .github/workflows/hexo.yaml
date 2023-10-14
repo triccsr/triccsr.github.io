@@ -73,18 +73,20 @@ jobs:
         uses: actions/deploy-pages@v2
 
   autopush:
-    needs: deploy
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule'
     steps:
   
       - name: 1. 检查url文件
         uses: actions/checkout@v3
+         with:
+          submodules: recursive
+          fetch-depth: 0 # fix bug that post update time is wrong
   
       - name: 2. 安装 Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
   
       - name: 3. 安装插件
         run: |
