@@ -84,17 +84,21 @@ jobs:
       - name: 2. 安装 Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
   
       - name: 3. 安装插件
         run: |
-          npm init -y
           npm install
 
-      - name: 3.5 hexo deploy to gen seo configs
+      - name: 3.1 Restore file modification time
+        run: |
+          /usr/bin/git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
+
+      - name: 3.2 hexo deploy to gen seo configs
         run: |
           npx hexo clean
-          npx hexo d --debug
+          npx hexo d
+          cat /home/runner/work/triccsr.github.io/triccsr.github.io/google.txt
          
       - name: 4. google 提交
         run: npx hexoautopush ${{secrets.google_client_email}} ${{secrets.google_private_key}}
