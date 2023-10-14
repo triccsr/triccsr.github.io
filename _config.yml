@@ -163,9 +163,9 @@ hexo_seo_autopush:
     count: 10
   bing:
     enable: true
-    date: created
+    date: updated
     count: 10
   google:
     enable: true
-    date: created
+    date: updated
     count: 10
