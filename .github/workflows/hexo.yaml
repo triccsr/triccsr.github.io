@@ -93,8 +93,8 @@ jobs:
 
       - name: 3.5 hexo deploy to gen seo configs
         run: |
-          hexo clean
-          hexo d --debug
+          npx hexo clean
+          npx hexo d --debug
          
       - name: 4. google 提交
         run: npx hexoautopush ${{secrets.google_client_email}} ${{secrets.google_private_key}}
