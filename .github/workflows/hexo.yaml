@@ -98,7 +98,7 @@ jobs:
         run: |
           npx hexo clean
           npx hexo d
-          cat /home/runner/work/triccsr.github.io/triccsr.github.io/google.txt
+          cat /home/runner/work/triccsr.github.io/triccsr.github.io/public/google.txt
          
       - name: 4. google 提交
         run: npx hexoautopush ${{secrets.google_client_email}} ${{secrets.google_private_key}}
