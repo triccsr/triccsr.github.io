@@ -51,8 +51,8 @@ darkmode: false
 # ---------------------------------------------------------------
 
 favicon:
-  small: /uploads/favicon.ico
-  medium: /uploads/favicon.ico
+  small: favicon.ico
+  medium: favicon.ico
   apple_touch_icon: /uploads/apple-touch-icon.png
   #safari_pinned_tab: /logo.svg
   android_manifest: /uploads/web.manifest
