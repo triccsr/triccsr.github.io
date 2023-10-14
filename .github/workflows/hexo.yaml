@@ -95,6 +95,7 @@ jobs:
         run: |
           npx hexo clean
           npx hexo d --debug
+          cd public
          
       - name: 4. google 提交
         run: npx hexoautopush ${{secrets.google_client_email}} ${{secrets.google_private_key}}
