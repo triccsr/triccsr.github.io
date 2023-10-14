@@ -123,6 +123,8 @@ sitemap: # Added by me, needs npm install hexo-generator-sitemap --save, https:/
   tags: true
   categories: false
 
+favicon: uploads/favicon.ico
+
 search: # Added by me, used for local search, npm install hexo-generator-searchdb installed
   path: search.xml
   field: post
