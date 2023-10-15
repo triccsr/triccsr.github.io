@@ -73,6 +73,7 @@ jobs:
         uses: actions/deploy-pages@v2
 
   autopush:
+    needs: deploy
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule'
     steps:
