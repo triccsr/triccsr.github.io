@@ -171,3 +171,5 @@ hexo_seo_autopush:
     enable: true
     date: updated
     count: 10
+
+mobile_layout_economy: true
