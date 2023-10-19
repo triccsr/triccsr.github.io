@@ -141,7 +141,7 @@ sidebar:
   # Sidebar display on mobile, default value is false (only for Pisces | Gemini)
   on_mobile: true
   # Reverse position of sidebar toggle and back2top button (left to right, right to left), default value is false
-  button_reverse: true
+  button_reverse: false
 
 # Sidebar Avatar
 avatar:
