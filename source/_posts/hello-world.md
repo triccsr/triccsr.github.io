@@ -13,6 +13,7 @@ abbrlink: 37d864d8
 <!--more-->
 
 ## Support alerts
+
 ```js
 {% note primary %}
 
@@ -21,7 +22,8 @@ abbrlink: 37d864d8
 **Welcome** to [Hexo!](https://hexo.io)
 
 {% endnote %}
-``` 
+```
+
 {% note primary %}
 
 #### Primary Header
