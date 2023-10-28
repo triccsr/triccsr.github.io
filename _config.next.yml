@@ -27,7 +27,7 @@ custom_file_path:
   #postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
   #bodyEnd: source/_data/body-end.njk
-  #variable: source/_data/variables.styl
+  variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
   style: source/_data/styles.styl
 
@@ -363,7 +363,7 @@ mobile_layout_economy: true
 # Browser header panel color.
 theme_color: # Modified by me
   light: "#a85e58"
-  dark: "#a85e58"
+  dark: "#864a46"
 # Override browsers' default behavior.
 body_scrollbar:
   # Place the scrollbar over the content.
@@ -375,7 +375,7 @@ codeblock:
   # Code Highlight theme
   # All available themes: https://theme-next.js.org/highlight/
   theme:
-    light: github
+    light: stackoverflow-light
     dark: github-dark-dimmed
   prism:
     light: prism
