@@ -79,12 +79,12 @@ This is a primary alert—check it out!
 
 {% endnote %}
 
-<script src="https://giscus.app/client.js"
+<!-- <script src="https://giscus.app/client.js"
         data-repo="triccsr/triccsr.github.io"
         data-repo-id="R_kgDOKSkgfw"
         data-category="Announcements"
         data-category-id="DIC_kwDOKSkgf84CZRTI"
-        data-mapping="title"
+        data-mapping="url"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
@@ -94,4 +94,4 @@ This is a primary alert—check it out!
         data-loading="lazy"
         crossorigin="anonymous"
         async>
-</script>
+</script> -->
