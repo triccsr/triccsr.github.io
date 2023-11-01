@@ -604,7 +604,7 @@ mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://apoorv.pro/lozad.js/demo/
-lazyload: true 
+lazyload: false 
 
 # Automatically insert whitespace between CJK and half-width characters.
 # For more information: https://github.com/vinta/pangu.js
@@ -681,13 +681,15 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
-  active:
+  active: giscus
   # Setting `true` means remembering the comment system selected by the visitor.
-  storage: true
+  storage: false
   # Lazyload all comment systems.
-  lazyload: false
+  lazyload: true 
   # Modify texts or order for any naves, here are some examples.
   nav:
+    giscus:
+      order: -1
     #disqus:
     #  text: Load Disqus
     #  order: -1
@@ -938,6 +940,67 @@ css: css
 js: js
 images: images
 
+
+
+# Waline Config File
+# For more information:
+# - https://waline.js.org
+# - https://waline.js.org/reference/component.html
+waline:
+  # New! Whether enable this plugin
+  enable: true
+
+  # Waline server address url, you should set this to your own link
+  serverURL: https://waline-for-hexo-next-blog.vercel.app/
+  #serverURL: https://waline.vercel.app
+
+  # Waline library CDN url, you can set this to your preferred CDN
+  # libUrl: https://unpkg.com/@waline/client@v2/dist/waline.js
+
+  # Waline CSS styles CDN url, you can set this to your preferred CDN
+  cssUrl: https://unpkg.com/@waline/client@v2/dist/waline.css
+
+  # Custom locales
+  # locale:
+  #   placeholder: Welcome to comment # Comment box placeholder
+
+  # If false, comment count will only be displayed in post page, not in home page
+  commentCount: true
+
+  # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`.
+  pageview: false
+
+  # Custom emoji
+  emoji:
+  #   - https://unpkg.com/@waline/emojis@1.1.0/weibo
+  #   - https://unpkg.com/@waline/emojis@1.1.0/alus
+  #   - https://unpkg.com/@waline/emojis@1.1.0/bilibili
+      - https://unpkg.com/@waline/emojis@1.1.0/qq
+  #   - https://unpkg.com/@waline/emojis@1.1.0/tieba
+      - https://unpkg.com/@waline/emojis@1.1.0/tw-emoji
+
+  # Comment information, valid meta are nick, mail and link
+  meta:
+    - nick
+    - mail
+    # - link
+
+  # Set required meta field, e.g.: [nick] | [nick, mail]
+  # requiredMeta:
+  #   - nick
+
+  # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
+  # lang: zh-CN
+
+  # Word limit, no limit when setting to 0
+  # wordLimit: 0
+
+  # Whether enable login, can choose from 'enable', 'disable' and 'force'
+  # login: enable
+
+  # comment per page
+  # pageSize: 10
+
 # for hexo-next-giscus plugin
 giscus:
   enable: true
@@ -946,7 +1009,7 @@ giscus:
   category: Announcements # Github discussion category
   category_id: DIC_kwDOKSkgf84CZRTI # Github discussion category id
   # Available values: pathname | url | title | og:title
-  mapping: url
+  mapping: pathname
   # Available values: 0 | 1
   reactions_enabled: 1
    # Available values: 0 | 1
@@ -956,6 +1019,6 @@ giscus:
   # Available values: en | zh-CN
   lang: en
   # Place the comment box above the comments
-  input_position: bottom
+  input_position: top
   # Load the comments lazily
   loading: lazy
