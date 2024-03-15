@@ -73,4 +73,4 @@ Boot Loader: grub
 
 然后拔掉u盘开机，网络恢复正常。
 
-尝试隐藏 KDE Application Launcher上的hibernate图标，但没找到方法（Fuck U KDE :rage:）。无奈之下只能`# systemctl mask hibernate.target`。
+尝试隐藏 KDE Application Launcher上的hibernate图标，但没找到方法（Fuck U KDE :rage:）。无奈之下只能`# systemctl mask hibernate.target`，mask之后倒确实不显示图标了。
