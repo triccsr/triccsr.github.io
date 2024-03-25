@@ -1,8 +1,9 @@
 ---
-title: 高端局-用u盘修复archlinux网络
+title: 低端局-用u盘修复archlinux网络
 tags:
   - 日常
   - archlinux
+  - bug
 abbrlink: b5a75f7a
 date: 2024-03-11 21:50:06
 ---
