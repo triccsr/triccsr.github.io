@@ -1,0 +1,30 @@
+:root{
+    --link-background-color: 128, 128, 128;
+    --link-background-opacity: 0.7;
+    --link-background-opacity-hover: 0.5;
+}
+a {
+    &.link {
+        color: rgb(150,200,255);
+    }
+}
+
+.warning {
+  border-inline-start-color: rgb(255,187,0) !important;
+  background-color: rgba(255,187,0,0.3) !important;
+}
+
+.note {
+  border-inline-start-color: rgb(0,128,255) !important;
+  background-color: rgba(0,128,255,0.3) !important;
+}
+
+.tip {
+    border-inline-start-color: rgb(0,255,0) !important;
+    background-color: rgba(0,255,0,0.3) !important;
+}
+
+.danger {
+  border-inline-start-color: rgb(255,0,0) !important;
+  background-color: rgba(255,0,0,0.3) !important;
+}
