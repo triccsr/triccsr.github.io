@@ -129,10 +129,10 @@ siteName = ""
 
 [comments.giscus]
 repo = "triccsr/triccsr.github.io"
-repoID = "R_kgDOKSkgfw"
+repoID = "R_kgDOLuURqA"
 category = "Announcements"
-categoryID = "DIC_kwDOKSkgf84CZRTI"
-mapping = "pathname"
+categoryID = "DIC_kwDOLuURqM4Cevmt"
+mapping = "URL"
 lightTheme = "light"
 darkTheme = "dark"
 reactionsEnabled = 1
