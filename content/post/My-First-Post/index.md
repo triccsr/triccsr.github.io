@@ -4,20 +4,6 @@ date = 2024-04-14T21:17:32+08:00
 draft = true
 +++
 
-> NOTE  
-> This is a note.
-{.note}
-
-> This is a warning.
-{.warning}
-
-> This is dangerous.
-{.danger}
-
-> TIP  
-> a tip
-{.tip}
-
 ## meow
 
 ```cpp
@@ -49,3 +35,27 @@ sequenceDiagram
 {{< quote author="A famous person" source="The book they wrote" url="https://en.wikipedia.org/wiki/Book">}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 {{< /quote >}}
+
+{{< admonition  type=note title="This is a note">}}
+A **note** banner
+{{< /admonition >}}
+
+{{< admonition  type=tip title="This is a tip">}}
+A **tip** banner
+{{< /admonition >}}
+
+{{< admonition  type=info title="This is an info">}}
+A **info** banner
+{{< /admonition >}}
+
+{{< admonition  type=warning title="This is a warning">}}
+A **warning** banner
+{{< /admonition >}}
+
+{{< admonition  type=danger title="This is a danger">}}
+A **danger** banner
+{{< /admonition >}}
+
+{{< admonition  type=bug title="This is a bug">}}
+A **bug** banner
+{{< /admonition >}}
