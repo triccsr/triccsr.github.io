@@ -39,9 +39,9 @@ date: 2023-10-06 16:43:09
 按F1键，显示搜索框，输入C/C++，选择`C/C++: Edit Configurations(UI)`，将会出现新页面C/C++ Configurations，同时.vscode文件夹下出现新文件c_cpp_properties.json。
 
 
-
-> 使用C/C++ Configurations页面编辑时，不能打开c_cpp_properties.json文件，否则进行的编辑将不被保存。
-{.warning}
+{{<admonition warning>}}
+使用C/C++ Configurations页面编辑时，不能打开c_cpp_properties.json文件，否则进行的编辑将不被保存。
+{{</admonition>}}
 
 
 
@@ -57,9 +57,10 @@ date: 2023-10-06 16:43:09
 2. 直接输入g++的路径，注意不要带引号
 
 
+{{<admonition tip>}}
+VSCode的编译器寻找顺序为MSVC -> GCC on WSL -> MinGW, 所以当电脑上有MSVC时默认编译器路径是MSVC路径，这是124机房电脑的vscode不认识`#include <bits/stdc++>`的原因。
+{{</admonition>}}
 
-> VSCode的编译器寻找顺序为MSVC -> GCC on WSL -> MinGW, 所以当电脑上有MSVC时默认编译器路径是MSVC路径，这是124机房电脑的vscode不认识`#include <bits/stdc++>`的原因。
-{.tip}
 
 
 #### Compiler Args
@@ -92,10 +93,9 @@ date: 2023-10-06 16:43:09
 
 这个是c和c++的版本，按需选择。
 
-
-> 我用上述编译器版本测试，即使在C++ standard中选择了`c++11`，在编译带`c++11`特性的代码时仍报错，解决方案是在编译参数中加上`-std=c++11`
-{.note}
-
+{{<admonition note>}}
+我用上述编译器版本测试，即使在C++ standard中选择了`c++11`，在编译带`c++11`特性的代码时仍报错，解决方案是在编译参数中加上`-std=c++11`
+{{</admonition>}}
 
 ### 编写代码
 
@@ -139,14 +139,12 @@ date: 2023-10-06 16:43:09
 
 #### launch.json(非必需)
 
-
-> 我使用DevC++自带的gdb7.8.1测试时，用vscode的集成终端无法输入数据，换成gdb13.2则没有此问题。解决方法是在launch.json中把`"externalConsole"`由`false`改为`true`，使用外部终端。
->
-> 但这样外部终端会一闪而过看不见输出，解决方法：
->
-> - 在代码的`main`函数的`return 0;`前面加上`system("pause");`，**在OJ提交时去掉这行**。
-> - 运行程序时选择debug c/c++ file按钮，设置断点
-{.note}
+{{<admonition note>}}
+我使用DevC++自带的gdb7.8.1测试时，用vscode的集成终端无法输入数据，换成gdb13.2则没有此问题。解决方法是在launch.json中把`"externalConsole"`由`false`改为`true`，使用外部终端。
+但这样外部终端会一闪而过看不见输出，解决方法：
+  - 在代码的`main`函数的`return 0;`前面加上`system("pause");`，**在OJ提交时去掉这行**。
+  - 运行程序时选择debug c/c++ file按钮，设置断点
+{{</admonition>}}
 
 
 ##### 自动配置

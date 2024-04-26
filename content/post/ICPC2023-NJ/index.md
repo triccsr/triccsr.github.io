@@ -11,9 +11,9 @@ math: true
 ## 摘要
 
 
-> **BITTER LESSON**  
-> C++ `std::map.insert()` **DOES NOT** insert the key value pair if an equivalent key already existed. [Example](https://www.geeksforgeeks.org/map-insert-in-c-stl/)
-{.warning}
+{{<admonition type=warning title="BITTER LESSON">}}
+C++ `std::map.insert()` **DOES NOT** insert the key value pair if an equivalent key already existed. [Example](https://www.geeksforgeeks.org/map-insert-in-c-stl/)
+{{</admonition>}}
 
 3 人，打星，6 题，还是寄。
 
@@ -34,11 +34,10 @@ $$\sum_{i=1}^n (\min(f_i,g_i)-a_i)$$
 where
 
 $$
-
-\begin{gathered}
-f_i=\max_{j=1}^i a_j \\
+\begin{gather*}
+f_i=\max_{j=1}^i a_j \\\\
 g_i=\max_{j=i}^n a_j
-\end{gathered}
+\end{gather*}
 $$
 
 #### Solution
