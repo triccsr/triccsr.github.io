@@ -1,11 +1,17 @@
 :root{
-    --link-background-color: 128, 128, 128;
+    --link-background-color: 0, 80, 180;
     --link-background-opacity: 0.7;
-    --link-background-opacity-hover: 0.5;
+    --link-background-opacity-hover: 0.4;
+    --link-text-color:rgb(0, 80, 180);
+    --code-text-color:rgb(0,0,0);
+    &[data-scheme="dark"]{
+        --link-background-color: 150, 200, 255;
+        --link-text-color:rgb(150,200,255);
+    }
 }
 a {
     &.link {
-        color: rgb(150,200,255);
+        color: var(--link-text-color);
     }
 }
 
