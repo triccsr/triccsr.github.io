@@ -44,13 +44,23 @@ A **note** banner
 A **tip** banner
 {{< /admonition >}}
 
-{{< admonition  type=info title="This is an info">}}
-A **info** banner
+{{< admonition  type=important title="This is an important">}}
+An **important** banner
 {{< /admonition >}}
 
 {{< admonition  type=warning title="This is a warning">}}
 A **warning** banner
 {{< /admonition >}}
+
+{{< admonition  type=caution title="This is a caution">}}
+A **caution** banner
+{{< /admonition >}}
+
+{{< admonition  type=info title="This is an info">}}
+A **info** banner
+{{< /admonition >}}
+
+
 
 {{< admonition  type=danger title="This is a danger">}}
 A **danger** banner
