@@ -7,7 +7,7 @@ url : 54b10acc
 
 我以前用Hexo下的[NexT主题](https://theme-next.js.org/)，它很华丽，但打开图片多的文章时巨卡无比[比如这篇](https://triccsr.github.io/62a2ca63/)。
 
-这次我选择了hugo-theme-stack，主要是看中了gallery功能。
+这次我选择了[hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack)，主要是看中了gallery功能。
 
 ## 更改
 
