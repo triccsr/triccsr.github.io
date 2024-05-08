@@ -37,7 +37,18 @@ powerlevel10k的完全体需要MesloLGS NF字体，我尝试在fontconfig中设�
 
 powerlevel10k好看且速度快，但它毕竟只是一个主题。一些oh-my-zsh开箱自带的功能现在需要手动配。
 
-我安装了zsh-history-substring-search插件以实现按up键历史搜索功能。它不仅可以匹配前缀，还可以匹配子串。这个插件与zsh-vi-mode有点冲突，但问题可以解决。
+我安装了zsh-history-substring-search插件以实现按up键历史搜索功能。它不仅可以匹配前缀，还可以匹配子串。
+
+zsh-history-substring-search与zsh-vi-mode有点冲突，在台式机上按照推荐设置
+```zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+```
+无法正常工作。参考[issue](https://github.com/zsh-users/zsh-history-substring-search/issues/140)，需要使用：
+```zsh
+zvm_after_init_commands+=("bindkey '^[[A' history-substring-search-up && bindkey '^[[B' history-substring-search-down")`
+```
+但推荐设置在安装了相同的插件的笔记本上就能正常工作，我不明白:confused:。
 
 我现在的`~/.zshrc`:
 
@@ -51,6 +62,11 @@ fi
 
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# plugins installed by pacman/yay/paru
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
@@ -58,8 +74,12 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 # zsh history substring search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 : ${HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE='true'}
+
 # make zsh history substring search work with zsh-vi-mode
 zvm_after_init_commands+=("bindkey '^[[A' history-substring-search-up && bindkey '^[[B' history-substring-search-down")
+# may not work 
+#bindkey '^[[A' history-substring-search-up
+#bindkey '^[[B' history-substring-search-down
 
 # zsh set history, based on oh-my-zsh https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/history.zsh
 HISTFILE=$HOME/.zsh_history
@@ -73,6 +93,4 @@ setopt hist_verify
 setopt share_history
 setopt inc_append_history
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
