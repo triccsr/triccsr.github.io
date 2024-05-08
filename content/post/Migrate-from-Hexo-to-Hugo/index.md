@@ -17,6 +17,37 @@ url : 54b10acc
 
 我按照[hugo doc里的方法](https://gohugo.io/content-management/diagrams/#mermaid-diagrams)加了mermaid支持。
 
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
+
+```mermaid
+graph TD
+          A[Christmas] -->|Get money| B(Go shopping)
+          B --> C{Let me think}
+          B --> G[/Another/]
+          C ==>|One| D[Laptop]
+          C -->|Two| E[iPhone]
+          C -->|Three| F[fa:fa-car Car]
+          subgraph section
+            C
+            D
+            E
+            F
+            G
+          end
+```
+
 加了admonition，也叫alert。实现方式抄的[DoIt](https://github.com/HEIGE-PCloud/DoIt)里的admonition，样式与github alert 接近。效果如下：
 
 ```md
@@ -89,7 +120,7 @@ Default tip
 
 - [ ] 暗色模式没法被dark reader识别。
 
-- [ ] mermaid的颜色没法随着亮色/暗色模式的切换而切换。（DoIt的解决方案是自己写了一个亮暗都能看清的mermaid主题）
+- [x] mermaid的颜色没法随着亮色/暗色模式的切换而切换。（DoIt也有这个问题，于是我写了一个亮暗都能看清~~不过很丑~~的mermaid主题）
 
 - [ ] 目录没法自动折叠。
 
