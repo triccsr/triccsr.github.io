@@ -1,10 +1,22 @@
 ---
 title: 链接
+slug: "links"
 links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: VCode神仙！
+    website: https://vcode28629.github.io/
+    image: https://avatars.githubusercontent.com/u/36874116?v=4
+  - title: 消失的DSM myk
+    website: https://igronemyk.github.io/Blog/
+  - title: Ubospica
+    website: https://www.cnblogs.com/ubospica/
+  - title: y1lan
+    website: https://y1lan.github.io/
+    image: https://y1lan.github.io/public/y1lan_icon.jpg
+  - title: qkoqhh大佬
+    website: https://qkoqhh.github.io/
+    image: https://qkoqhh.github.io/images/avatar.jpg
+  - title: GGN_2015
+    website: https://blog.csdn.net/ggn_2015
 menu:
     main: 
         weight: 4
@@ -12,22 +24,6 @@ menu:
             icon: link
 
 comments: false
+readingTime: false
+license: false
 ---
-
-To use this feature, add `links` section to frontmatter.
-
-This page's frontmatter:
-
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-```
-
-`image` field accepts both local and external images.

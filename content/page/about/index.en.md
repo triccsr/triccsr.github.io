@@ -9,4 +9,9 @@ menu:
         params:
             icon: user
 ---
+
+My English is poor.
+
+Error: Translate server not found.
+
 :sob:

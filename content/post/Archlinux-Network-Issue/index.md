@@ -10,7 +10,7 @@ date: 2024-03-11 21:50:06
 
 ## 摘要
 
-{{<admonition type=danger title="BITTER LESSON">}} 
+{{<admonition type=caution title="BITTER LESSON">}} 
 若在linux下手滑点到休眠键，**不要手动关机，等机器自己关**。  
 没配置休眠的结果最多是正在进行的任务丢失，但此时手动关机可能导致系统损坏。
 {{</admonition>}}
@@ -52,15 +52,15 @@ Boot Loader: grub
 
 工位有个装了ventoy的u盘，我在上面下了个archlinux的.iso镜像，然后从u盘启动。
 
-### 1. 微码错误
+### 微码错误
 
 在ventoy的界面上选择boot in normal mode后显示microcode未更新开不开机，选择boot in grub2 mode后微码错误解除。
 
-### 2. nomodeset
+### nomodeset
 
 解除微码错误后还是开不开机，屏幕上出现"triggering uevents"后就会黑屏。查询了[这篇帖子](https://bbs.archlinux.org/viewtopic.php?id=151259)，[添加内核参数](https://wiki.archlinux.org/title/Kernel_parameters)`nomodeset nouveau.nomodeset=0`（我使用 grub，在grub界面出现时按e键，在linux一行的末尾添加参数）后成功开机。（Fuck U Nvidia :rage:）
 
-### 3. arch-chroot
+### arch-chroot
 
 开机后电脑将会运行u盘中的archlinux系统。
 
@@ -68,7 +68,7 @@ Boot Loader: grub
 
 `# arch-chroot /mnt`将u盘系统的根目录切换到原先的根目录，重新安装dhcpcd和networkmanager后关机。
 
-### 4. 后续处理
+### 后续处理
 
 然后拔掉u盘开机，网络恢复正常。
 
