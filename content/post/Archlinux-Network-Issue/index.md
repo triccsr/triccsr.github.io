@@ -8,9 +8,30 @@ url: b5a75f7a
 date: 2024-03-11 21:50:06
 ---
 
-## 摘要
+## Update on May 14
 
-{{<admonition type=caution title="BITTER LESSON">}} 
+{{<admonition question "破案，但为什么？">}}
+在Windows下重启进grub，然后选择archlinux进入就会出现网络问题。重启不能解决问题，但关机后开机可以解决问题。
+
+原因不详。
+{{</admonition>}}
+
+进windows搞了几下acrobat，结果archlinux又出现了相同的问题，但我这次根本没休眠，NetworkManager service也是正常的。
+
+然后我按照上次的操作用arch镜像u盘挂载原来的根目录，然后发现所有网络相关包都在，于是什么都没干就退出了。然后再开机进入原来的archlinux，发现居然好了。
+
+经测试，windows->关机->开机进arch没事，但windows->重启进arch则有事。解决方式是先关机后开机。
+
+考虑到上一次出bug前也进了windows，上一次的bug不一定是休眠导致的。
+
+对KDE和NVIDIA致歉，我fuck错了人。
+
+之后为更新前的内容，不删了。
+
+
+## 摘要 (out of date)
+
+{{<admonition type=warning title="BITTER LESSON">}} 
 若在linux下手滑点到休眠键，**不要手动关机，等机器自己关**。  
 没配置休眠的结果最多是正在进行的任务丢失，但此时手动关机可能导致系统损坏。
 {{</admonition>}}

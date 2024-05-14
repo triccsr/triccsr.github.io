@@ -48,7 +48,8 @@ graph TD
           end
 ```
 
-加了admonition，也叫alert。实现方式抄的[DoIt](https://github.com/HEIGE-PCloud/DoIt)里的admonition，样式与github alert 接近。效果如下：
+加了admonition，也叫alert。实现方式抄的[DoIt](https://github.com/HEIGE-PCloud/DoIt)里的admonition，样式与github alert 接近。既支持github里的alert样式，又支持mkdocs里的admonition样式（不全），效果如下：
+
 
 ```md
 {{</* admonition  type=note title="This is a note" */>}}
@@ -91,6 +92,27 @@ A **warning** banner
 {{< admonition  type=caution title="This is a caution">}}
 A **caution** banner
 {{< /admonition >}}
+
+
+{{< admonition  type=info title="This is an info">}}
+A **info** banner
+{{< /admonition >}}
+
+{{< admonition  question "This is an question">}}
+A **question** banner
+{{< /admonition >}}
+
+{{< admonition  type=danger title="This is a danger">}}
+A **danger** banner
+{{< /admonition >}}
+
+{{< admonition  type=bug title="This is a bug">}}
+A **bug** banner
+{{< /admonition >}}
+
+
+
+
 
 也可以不加type和title，默认type为note，title为type，效果如下：
 ```md
