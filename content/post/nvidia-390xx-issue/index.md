@@ -1,8 +1,8 @@
 ---
 title : '低端局-nvidia又双叒叕坏了'
 date : 2024-05-10T22:41:13+08:00
-tag : 
-    - 日常
+tags : 
+    - 修电脑
     - archlinux
     - bug
 draft : false

@@ -1,7 +1,7 @@
 ---
 title: 低端局-用u盘修复archlinux网络
 tags:
-  - 日常
+  - 修电脑
   - archlinux
   - bug
 url: b5a75f7a
