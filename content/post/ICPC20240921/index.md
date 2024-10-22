@@ -1,5 +1,5 @@
 ---
-title : 'ICPC2024网络赛第二场战犯寄录'
+title : 'ICPC2024 网络赛第二场 战犯寄录'
 date : 2024-09-22T20:35:46+08:00
 draft : false
 url : 7327d411

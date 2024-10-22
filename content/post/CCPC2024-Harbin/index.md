@@ -1,5 +1,5 @@
 ---
-title : 'CCPC2024哈尔滨站战犯寄录'
+title : 'CCPC2024 哈尔滨站 战犯寄录'
 date : 2024-10-20T20:04:03+08:00
 draft : false
 url : 947b0acb

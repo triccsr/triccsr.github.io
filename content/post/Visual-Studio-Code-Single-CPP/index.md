@@ -1,5 +1,5 @@
 ---
-title: 使用Visual Studio Code进行C/C++单文件编程（Windows系统）
+title: VSCode C/C++单文件编程（Windows系统）
 tags:
   - Visual Studio Code
 url: fe9a715b

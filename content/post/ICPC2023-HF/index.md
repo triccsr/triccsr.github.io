@@ -1,5 +1,5 @@
 ---
-title: ICPC2023合肥最终寄
+title: ICPC2023 合肥 最终寄
 tags:
   - XCPC
 math: true
