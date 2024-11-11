@@ -1,5 +1,5 @@
 ---
-title : '从Hexo到Hugo'
+title : '我的hugo-theme-stack'
 date : 2024-05-08T22:37:30+08:00
 url : 54b10acc
 ---
@@ -14,6 +14,8 @@ url : 54b10acc
 ### 大更改
 
 为了方便改主题，我使用了git-submodule安装方式，然后把[starter](https://github.com/CaiJimmy/hugo-theme-stack-starter)里的config文件夹复制到自己的站点文件夹里。
+
+#### mermaid
 
 我按照[hugo doc里的方法](https://gohugo.io/content-management/diagrams/#mermaid-diagrams)加了mermaid支持。
 
@@ -48,8 +50,68 @@ graph TD
           end
 ```
 
-加了admonition，也叫alert。实现方式抄的[DoIt](https://github.com/HEIGE-PCloud/DoIt)里的admonition，样式与github alert 接近。既支持github里的alert样式，又支持mkdocs里的admonition样式（不全），效果如下：
+#### admonition(alert)
 
+加了admonition，也叫alert。实现方式基于[DoIt](https://github.com/HEIGE-PCloud/DoIt)里的admonition。样式与github alert 接近。
+
+现支持以下种类
+
+github alert:
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+部分mkdocs
+
+> [!INFO]
+> info
+
+> [!question]
+> question
+
+> [!danger]
+> danger
+
+> [!bug]
+> bug
+
+##### github alert
+
+无标题
+
+```md
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+
+```
+
+有标题（真正的github alert不支持）
+
+```md
+> [!WARNING]+ Radiation hazard
+> Do not approach or handle without protective gear.
+```
+
+> [!WARNING]+ Radiation hazard
+> Do not approach or handle without protective gear.
+
+##### hugo shortcode
 
 ```md
 {{</* admonition  type=note title="This is a note" */>}}
@@ -60,61 +122,10 @@ A **note** banner
 A **tip** banner
 {{</* /admonition */>}}
 
-{{</* admonition  type=important title="This is an important" */>}}
-An **important** banner
-{{</* /admonition */>}}
-
-{{</* admonition  type=warning title="This is a warning" */>}}
-A **warning** banner
-{{</* /admonition */>}}
-
-{{</* admonition  type=caution title="This is a caution" */>}}
-A **caution** banner
-{{</* /admonition */>}}
 ```
 
-{{< admonition  type=note title="This is a note">}}
-A **note** banner
-{{< /admonition >}}
-
-{{< admonition  type=tip title="This is a tip">}}
-A **tip** banner
-{{< /admonition >}}
-
-{{< admonition  type=important title="This is an important">}}
-An **important** banner
-{{< /admonition >}}
-
-{{< admonition  type=warning title="This is a warning">}}
-A **warning** banner
-{{< /admonition >}}
-
-{{< admonition  type=caution title="This is a caution">}}
-A **caution** banner
-{{< /admonition >}}
-
-
-{{< admonition  type=info title="This is an info">}}
-A **info** banner
-{{< /admonition >}}
-
-{{< admonition  question "This is an question">}}
-A **question** banner
-{{< /admonition >}}
-
-{{< admonition  type=danger title="This is a danger">}}
-A **danger** banner
-{{< /admonition >}}
-
-{{< admonition  type=bug title="This is a bug">}}
-A **bug** banner
-{{< /admonition >}}
-
-
-
-
-
 也可以不加type和title，默认type为note，title为type，效果如下：
+
 ```md
 {{</* admonition */>}}
 Default
