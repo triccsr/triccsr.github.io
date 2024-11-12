@@ -1,7 +1,7 @@
 ---
 title : 'ICPC 2024 杭州站 小黄鸭游记'
 date : 2024-11-12T13:09:10+08:00
-draft : true
+draft : false
 url : 5c3701ff
 math: true
 ---
