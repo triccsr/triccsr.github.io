@@ -14,10 +14,6 @@ math: true
 
 补题链接私信sua的人。
 
-## 题解
-
-咕咕咕
-
 ## 游记
 
 ### Day 1, Sat
@@ -109,3 +105,200 @@ fyc写E时Dew看B。Dew抓我当小黄鸭，但我根本没听懂。Dew写B，AC
 滚榜过程中有些抽象队名，比如“队长十年单身换区域赛铜牌”，结果真铜牌了。还有“队长征婚+QQ号”，qq号我搜了是真的，且该队伍封榜后一直A题导致队名被念了几次。
 
 滚榜结束后很晚了，fyc提议去高铁站吃晚饭。结果高铁站里面只有一家康师傅和一家德克士，还很贵。fyc吃了康师傅，我出站去美宜佳买了点吃的。
+
+## 题解
+
+### G
+
+给定一个内向基环树森林，节点有颜色，问从每个点出发最先经过k次的颜色是哪种。
+
+$n\leq 2\times 10^5,1\leq k\leq 10^9$。2s,1024M
+
+---
+
+fyc大佬是对的，这东西看着简单，实际上细节很多，不好调。杭州站讲题人也说有的队一开场就去写G，写了5h也没写出来。
+
+容易想到在dfs环上挂的子树时，对每个颜色维护一个栈，若栈的大小$\geq k$，则栈上的倒数第k个位置即为恰好经过k次该颜色的位置。否则需要上环，在环上走的步数可以通过需要走的圈数和余数计算。这样可以$O(1)$计算从当前位置经过某颜色k次的结束位置（包括走的圈数）。由于在dfs当前节点的某个儿子时，只会让儿子节点的颜色结束位置变近，其他颜色的结束位置不变，所以可以维护每个颜色的结束位置数组，暴力维护全局最小值，回溯时恢复状态。
+
+但这样有个问题，对于环上挂着的不同子树，每种颜色在从不同树根出发的结束位置并不相同。~~所以我们需要数据结构维护不同树根的初始结束位置，吗？~~
+
+一个巧妙的解决方式是把环延长一倍，然后拆出一条链出来，这样不影响答案，且只剩一个子树。
+
+由于该题目只需求最先经过k次的颜色，且只输出所有点答案的和，所以即使有很离谱的bug也能过样例。既然暴力好写，应该写个对拍。
+
+巨丑的代码（实际上我没有破环为链）：
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+const int N=4e5+11,inf=0x3f3f3f3f;
+
+int n,k,t[N],a[N],v[N];
+
+vector<int> r[N];
+deque<int> loop[N];
+int lTail;
+vector<int> posOnPath[N];
+deque<int> posOnLoop[N];
+
+bool onLoop[N];
+
+struct M{
+    int pathDep;
+    int cntPath;
+    int cntLoop;
+    int type;
+    bool operator <(const M &m)const{
+        if(pathDep!=m.pathDep)return pathDep>m.pathDep;
+        if(cntLoop==0)return false;
+        if(m.cntLoop==0)return true;
+        int cr=(k-cntPath-1)/cntLoop,mcr=(k-m.cntPath-1)/m.cntLoop;
+        if(cr!=mcr)return cr<mcr;
+        return posOnLoop[type].at((k-cntPath)-cr*cntLoop-1)<posOnLoop[m.type].at((k-m.cntPath)-mcr*m.cntLoop-1);
+    }
+    M()=delete;
+    M(int pathDep,int cntPath,int cntLoop,int type):pathDep(pathDep),cntPath(cntPath),cntLoop(cntLoop),type(type){}
+};
+
+
+void dfs(int now,int d,vector<M> &mushrooms,M &pathMin){
+    M oldValue=mushrooms[t[now]];
+    M oldMin=pathMin;
+    posOnPath[t[now]].push_back(d);
+    if((int)posOnPath[t[now]].size()>=k){
+        mushrooms[t[now]].pathDep=posOnPath[t[now]][(int)posOnPath[t[now]].size()-k];    
+    }
+    mushrooms[t[now]].cntPath=(int)posOnPath[t[now]].size();
+    pathMin=min(pathMin,mushrooms[t[now]]);
+    v[now]=pathMin.type;
+    for(int to:r[now]){
+        if(onLoop[to])continue;
+        dfs(to,d+1,mushrooms,pathMin);
+    }
+    mushrooms[t[now]]=oldValue;
+    pathMin=oldMin;
+    posOnPath[t[now]].pop_back();
+}
+namespace J{
+    int get_v(int u){
+        static int c[N];
+        vector<int> used;
+        int ret=0;
+        while(1){
+            c[t[u]]+=1;
+            used.push_back(t[u]);
+            if(c[t[u]]==k){
+                ret=t[u];
+                break;
+            }
+            u=a[u];
+        }
+        for(int type:used){
+            c[type]=0;
+        }
+        return ret;
+    }
+}
+void work(){
+    cin>>n>>k;
+    for(int i=0;i<=n;++i){
+        r[i].clear();
+        loop[i].clear();
+        posOnPath[i].clear();
+        posOnLoop[i].clear();
+        onLoop[i]=false;
+        v[i]=0;
+    }
+    for(int i=1;i<=n;++i)cin>>t[i];
+    for(int i=1;i<=n;++i){
+        cin>>a[i];
+        r[a[i]].push_back(i);
+    }
+
+    lTail=0;
+    vector<bool> vis(n+1,false),inStack(n+1,false);
+    vector<int> stk;
+    for(int i=1;i<=n;++i){
+        if(!vis[i]){
+            int now=i;
+            stk.clear();
+            while(1){
+                inStack[now]=true;
+                vis[now]=true;
+                stk.push_back(now);
+                if(inStack[a[now]]){
+                    while(!stk.empty()){
+                        loop[lTail].push_front(stk.back());
+                        onLoop[stk.back()]=true;
+                        if(stk.back()==a[now])break;
+                        inStack[stk.back()]=false;
+                        stk.pop_back();
+                    }
+                    lTail+=1;
+                    break;
+                }
+                if(vis[a[now]])break;
+                now=a[now];
+            }
+            while(!stk.empty()){
+                inStack[stk.back()]=false;
+                stk.pop_back();
+            }
+        }
+    }
+
+    vector<M> info(n+1,M(-inf,0,0,0));
+    for(int i=1;i<=n;++i)info[i].type=i;
+
+    for(int l=0;l<lTail;++l){
+        vector<int> loopTypes;
+        for(int i=0;i<(int)loop[l].size();++i){
+            posOnLoop[t[loop[l][i]]].push_back(i);
+            loopTypes.push_back(t[loop[l][i]]);
+        }
+
+        M pathMin=M(-inf,0,0,0);
+        for(int type:loopTypes){
+            info[type].pathDep=-inf;
+            info[type].cntPath=0;
+            info[type].cntLoop=(int)posOnLoop[type].size();
+            pathMin=min(pathMin,info[type]);
+        }
+
+        for(int i=(int)loop[l].size()-1;i>=0;--i){
+            dfs(loop[l][i],1,info,pathMin);
+            posOnPath[t[loop[l][i]]].push_back(-i);
+            if((int)posOnPath[t[loop[l][i]]].size()>=k){
+                info[t[loop[l][i]]].pathDep=posOnPath[t[loop[l][i]]].at(posOnPath[t[loop[l][i]]].size()-k);
+            }
+            info[t[loop[l][i]]].cntPath=(int)posOnPath[t[loop[l][i]]].size();
+            pathMin=min(pathMin,info.at(t[loop[l][i]]));
+        }
+
+        for(int type:loopTypes){
+            posOnLoop[type].clear();
+            posOnPath[type].clear();
+            info[type]=M(-inf,0,0,type);
+        }
+
+    }
+    long long ans=0;
+    for(int i=1;i<=n;++i){
+        ans+=1ll*i*v[i];
+    }
+    cout<<ans<<"\n";
+}
+int main(){
+    //freopen("g.in","r",stdin);
+    // ios::sync_with_stdio(0);
+    // cin.tie(0);
+    int T;
+    cin>>T;
+    while(T--){
+        work();
+    }
+    return 0;
+}
+
+```
