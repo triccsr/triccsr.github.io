@@ -1,9 +1,11 @@
 ---
-title : 'ICPC 2024 杭州站 小黄鸭游记'
+title : 'ICPC 2024 杭州站 小黄鸭游记 (GJ题解)'
 date : 2024-11-12T13:09:10+08:00
 draft : false
 url : 5c3701ff
 math: true
+tags:
+    - XCPC
 ---
 
 ## 摘要
@@ -293,6 +295,150 @@ int main(){
     //freopen("g.in","r",stdin);
     // ios::sync_with_stdio(0);
     // cin.tie(0);
+    int T;
+    cin>>T;
+    while(T--){
+        work();
+    }
+    return 0;
+}
+
+```
+### J
+
+给定一个无向图$G=\langle V,E \rangle$。有两种标记，标记1和标记2。每个节点上面可以只打标记1，只打标记2，两个标记都打，或两个标记都不打。
+
+定义一个标记策略是合法的，当且仅当对于图上的任意边$(u,v)\in E$，u上有标记1且v上有标记2，或v上有标记1且u上有标记2。
+
+给定两个整数$n_1$和$n_2$，计算所有合法标记策略的$C(n_1-1,\text{标记1的数量}-1)\cdot C(n_2-1,\text{标记2的数量}-1)$之和。两个标记策略不同当且仅当存在一个节点的标记集合不同。
+
+多测，数据组数$\leq 500$，每组数据$m=\lvert E \rvert\leq 20$，$1\leq n_1,n_2\leq 10^9$，保证不超过5组数据$m\geq 10$。
+
+----
+
+场上三人都不会，刚结束时想出来一个又满又难写的$\Theta(m^2\cdot 2^m)$的做法，这显然过不去。
+
+想了几天都没想出$\Theta(m\cdot 2^m)$的做法，直到看了[这个](https://www.cnblogs.com/chenhx-xcpc/p/18542561)，惊觉自己是SB。
+
+首先考虑图中没有孤立点（即没有边与之相连，自环不算孤立点）的情况。
+
+不难看出如果图中没有孤立点，对于任意合法的标记策略，每个节点都被打上至少一个标记。否则如果存在一个节点上面没有标记，则与该节点相邻的边一定不符合条件。
+
+现在节点的标记状态只有三种，分别是只有标记1，只有标记2，和两个标记都有。
+
+枚举只有标记1的节点集合$S_1\subseteq V$，在剩余的节点集合$V-S_1$中枚举只有标记2的节点集合$S_2\subseteq V-S_1$。易证若$S_1$和$S_2$都是独立集，则该标记策略合法，其贡献为
+$$C(n_1-1,\lvert V \rvert - \lvert S_2 \rvert - 1)\cdot C(n_2-1,\lvert V \rvert - \lvert S_1 \rvert -1)$$
+这个东西在预处理后可以$O(1)$查表。
+
+由于可以在$O(m\cdot 2^m)$的时间内预处理出所有点集是否是独立集，所以我们获得了一个$\Theta(3^m)$的优秀做法（该复杂度来自枚举子集）。
+
+然后就是常见的套路，通过fwt将求子集和的时间复杂度从$\Theta(3^m)$降至$\Theta(m\cdot 2^m)$。
+
+现在已经得到了图中没有孤立点的解法，如果图中有孤立点怎么办呢？
+
+设孤立点的数量为$p$，由于$p^2\leq 2\times 2^p$，可以暴力$p^2$枚举有多少孤立点上有标记1，有多少孤立点上有标记2，然后计算没有孤立点的图。时间复杂度$\Theta(p^2\cdot (m-p)\cdot 2^{m-p})\leq \Theta(2\times (m-p)\cdot 2^m)=\Theta(m\cdot 2^m)$。
+
+代码（十分好写，大部分都是没有技术含量的预处理，核心代码很短）：
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long LL;
+const int M=21;
+const LL MOD=1e9+7;
+LL ksm(LL a,LL x){
+    a=(a%MOD+MOD)%MOD;
+    LL ret=1;
+    while(x){
+        if(x&1)ret=ret*a%MOD;
+        a=a*a%MOD;
+        x>>=1;
+    }
+    return ret;
+}
+LL inv(LL x){
+    return ksm(x,MOD-2);
+}
+LL n1,n2,c1[M],c2[M],smallC[M][M];
+int m,k,e[M];
+bool isIndependent[1<<M];
+int cnt1[1<<M];
+LL subsetSum[1<<M];
+void work(){
+    cin>>n1>>n2>>m>>k;
+    c1[0]=1;//C(n1-1,i)
+    c2[0]=1;//C(n2-1,i)
+    for(int i=1;i<=m;++i){
+        c1[i]=c1[i-1]*(n1-i)%MOD*inv(i)%MOD;
+        c2[i]=c2[i-1]*(n2-i)%MOD*inv(i)%MOD;
+    }
+    bool tmpe[M][M];
+    memset(tmpe,0,sizeof(tmpe));
+    for(int i=0,a,b;i<k;++i){
+        cin>>a>>b;
+        tmpe[a-1][b-1]=tmpe[b-1][a-1]=true;
+    }
+    int q=0,newIndex[M];
+    bool isPlain[M];
+    for(int i=0;i<m;++i){
+        isPlain[i]=true;
+        for(int j=0;j<m;++j){
+            if(tmpe[i][j]){
+                isPlain[i]=false;
+                break;
+            }
+        }
+        newIndex[i]=isPlain[i]?-1:q++;
+    }
+    memset(e,0,sizeof(e));
+    for(int i=0;i<m;++i){
+        for(int j=0;j<m;++j){
+            if(tmpe[i][j])e[newIndex[i]]|=(1<<newIndex[j]);
+        }
+    }
+    isIndependent[0]=true;
+    for(int s=1;s<(1<<q);++s){
+        int lb=0;
+        while(!((1<<lb)&s))++lb;
+        isIndependent[s]=(isIndependent[s^(1<<lb)]&&((e[lb]&s)==0))?true:false;
+    }
+    LL ans=0;
+    for(int p1=0;p1<=m-q;++p1){
+        for(int p2=0;p2<=m-q;++p2){
+            LL tmp=0;
+            for(int only2=0;only2<(1<<q);++only2){
+                subsetSum[only2]=isIndependent[only2]?c1[q-cnt1[only2]+p1-1]:0;
+            }
+            for(int b=0;b<q;++b){
+                for(int s=0;s<(1<<q);++s){
+                    if(s&(1<<b)){
+                        subsetSum[s]=(subsetSum[s^(1<<b)]+subsetSum[s])%MOD;
+                    }
+                }
+            }
+            for(int only1=0;only1<(1<<q);++only1){
+                if(!isIndependent[only1])continue;
+                tmp+=c2[q-cnt1[only1]+p2-1]*subsetSum[((1<<q)-1)^only1]%MOD;
+            }
+            tmp%=MOD;
+            ans+=smallC[m-q][p1]*smallC[m-q][p2]%MOD*tmp%MOD;
+        }
+    }
+    ans%=MOD;
+    cout<<ans<<"\n";
+}
+int main(){
+    smallC[0][0]=1;
+    for(int i=1;i<M;++i){
+        smallC[i][0]=1;
+        for(int j=1;j<M;++j){
+            smallC[i][j]=(smallC[i-1][j]+smallC[i-1][j-1])%MOD;
+        }
+    }
+    cnt1[0]=0;
+    for(int s=1;s<(1<<M);++s){
+        cnt1[s]=cnt1[s^(s&(-s))]+1;
+    }
     int T;
     cin>>T;
     while(T--){
