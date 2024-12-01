@@ -1,5 +1,5 @@
 ---
-title: 链接
+title: 友链
 slug: "links"
 links:
   - title: VCode神仙！
