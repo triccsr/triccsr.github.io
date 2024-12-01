@@ -5,6 +5,7 @@ tags:
   - XCPC
 math: true
 url: b78ac18b
+categories: ["网瘾"]
 ---
 
 ## Update On 2023.10.21

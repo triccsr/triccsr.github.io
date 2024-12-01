@@ -5,6 +5,7 @@ tags:
   - c++
 url: 8aacde4
 date: 2024-03-26 00:22:30
+categories: ["技术"]
 ---
 ## 问题
 

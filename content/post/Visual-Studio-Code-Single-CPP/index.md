@@ -4,6 +4,7 @@ tags:
   - Visual Studio Code
 url: fe9a715b
 date: 2023-10-06 16:43:09
+categories: ["技术"]
 ---
 
 ## Upd on 2024.5.6

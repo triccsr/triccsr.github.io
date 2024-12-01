@@ -2,11 +2,11 @@
 title : '低端局-nvidia又双叒叕坏了'
 date : 2024-05-10T22:41:13+08:00
 tags : 
-    - 修电脑
     - archlinux
     - bug
 draft : false
 url : cae3365c
+categories: ["技术"]
 ---
 {{<admonition warning>}}
 我真傻，真的。我单知道linux内核大更新可能导致显卡驱动挂掉，我不知道gcc更新+内核小更新也会。

@@ -2,10 +2,10 @@
 title : '一只菜鸡的Konsole坏了，这是它的kde发生的变化'
 date : 2024-05-07T15:49:41+08:00
 tags :
-    - 修电脑
     - archlinux
     - bug
 url : 0e1b1d21
+categories: ["技术"]
 ---
 ## 背景
 

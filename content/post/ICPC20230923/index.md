@@ -6,6 +6,7 @@ tags:
   - 2SAT
 math: true
 url: ad86c7bd
+categories: ["网瘾"]
 ---
 
 ## 游寄

@@ -6,6 +6,9 @@ url : 947b0acb
 math: true
 tags: 
     - XCPC
+categories: 
+    - 网瘾
+
 ---
 
 ## 摘要
