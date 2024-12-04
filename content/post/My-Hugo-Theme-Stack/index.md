@@ -1,5 +1,5 @@
 ---
-title : '我的 hugo theme stack'
+title : '我对 hugo theme stack 的一些修改'
 date : 2024-05-08T22:37:30+08:00
 lastmod :  '2024-12-01'
 url : 54b10acc
@@ -204,13 +204,17 @@ Default tip
 
 ### 小更改
 
-小的更改被我放在了site文件夹下。
+把链接改成了蓝色，改了代码的字体和字号。（在site文件夹下更改，没动主题）
 
-把链接改成了蓝色，改了代码的字体和字号。
+
+
+我调整了浅色模式的颜色，并去掉了五颜六色的category颜色。
+
+该主题的暗色模式无法被dark reader检测到。为了让dark reader闭嘴，我在head里加了一句`<meta name="color-scheme" content="dark">`。
 
 ## 问题
 
-- [ ] 暗色模式没法被dark reader识别。
+- [x] 暗色模式没法被dark reader识别。
 
 - [x] mermaid的颜色没法随着亮色/暗色模式的切换而切换。（DoIt也有这个问题，于是我写了一个亮暗都能看清~~不过很丑~~的mermaid主题）
 
