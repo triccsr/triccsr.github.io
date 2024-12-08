@@ -7,12 +7,8 @@ categories:
   - 日常
 tags:
   - 南京大学
-markup:
-  tableOfContents:
-    endLevel : 3
-    ordered : false
-    startLevel : 2
 ---
+
 ## 摘要
 
 隔壁的电子楼出逝了，我从计科楼里跑路~~顺便看花~~。
@@ -29,8 +25,6 @@ markup:
 ![](阔瓣含笑1.jpg)
 ![](紫叶李-电子楼2.jpg)
 
-
-<!--more-->
 
 ## 玉兰
 
