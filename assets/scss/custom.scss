@@ -48,21 +48,18 @@ a {
             max-width: 1024px;
             --left-sidebar-max-width: 20%;
             --right-sidebar-max-width: 30%;
-            --section-separation-max: 0px;
         }
 
         @include respond(lg) {
             max-width: 1280px;
             --left-sidebar-max-width: 15%;
             --right-sidebar-max-width: 25%;
-            --section-separation-max: 0px;
         }
 
         @include respond(xl) {
             max-width: 1536px;
             --left-sidebar-max-width: 20%;
-            --right-sidebar-max-width: 30%;
-            --section-separation-max: 40px;
+            --right-sidebar-max-width: 25%;
         }
     }
 
