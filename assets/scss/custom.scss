@@ -12,7 +12,7 @@
     --body-background: #dddddd;
 
     --accent-color: #21364b;
-    --accent-color-darker: #1b2a3a;
+    --accent-color-darker: #556d88;
 
     --body-text-color: #40454a;
 
@@ -28,5 +28,14 @@
 a {
     &.link {
         color: var(--link-text-color);
+    }
+}
+[data-scheme="light"] {
+    --pre-text-color: #272822;
+    --pre-background-color: #f5f5f5;
+}
+.widget--toc{
+    #TableOfContents {
+        font-size: 1.4rem;
     }
 }
