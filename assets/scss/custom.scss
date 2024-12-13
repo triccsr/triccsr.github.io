@@ -8,6 +8,22 @@
         --link-background-color: 150, 200, 255;
         --link-text-color:rgb(150,200,255);
     }
+
+    --body-background: #dddddd;
+
+    --accent-color: #21364b;
+    --accent-color-darker: #1b2a3a;
+
+    --body-text-color: #40454a;
+
+
+    --card-background: #eeeeee;
+    --card-background-selected: #e8e8e8;
+
+    --card-text-color-main: #222528;
+    --card-separator-color: rgba(190, 192, 204, 0.5);
+
+    --scrollbar-thumb: hsl(0, 0%, 60%);
 }
 a {
     &.link {
