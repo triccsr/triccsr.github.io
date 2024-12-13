@@ -3,7 +3,8 @@ title : '我对 hugo theme stack 的一些修改'
 date : 2024-05-08T22:37:30+08:00
 lastmod :  '2024-12-01'
 url : 54b10acc
-categories: ["技术"]
+categories: 
+    - 技术
 tags: ["Hugo"]
 ---
 ## 背景

@@ -39,3 +39,71 @@ a {
         font-size: 1.4rem;
     }
 }
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    &.extended {
+        @include respond(md) {
+            max-width: 1024px;
+            --left-sidebar-max-width: 20%;
+            --right-sidebar-max-width: 30%;
+            --section-separation-max: 0px;
+        }
+
+        @include respond(lg) {
+            max-width: 1280px;
+            --left-sidebar-max-width: 15%;
+            --right-sidebar-max-width: 25%;
+            --section-separation-max: 0px;
+        }
+
+        @include respond(xl) {
+            max-width: 1536px;
+            --left-sidebar-max-width: 20%;
+            --right-sidebar-max-width: 30%;
+            --section-separation-max: 40px;
+        }
+    }
+
+    &.compact {
+        @include respond(md) {
+            --left-sidebar-max-width: 25%;
+            max-width: 768px;
+        }
+
+        @include respond(lg) {
+            max-width: 1024px;
+            --left-sidebar-max-width: 20%;
+        }
+
+        @include respond(xl) {
+            max-width: 1280px;
+        }
+    }
+}
+.main-container {
+    order: -2;
+    min-width: 0;
+    max-width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-separation);
+
+    @include respond(md) {
+        padding-top: var(--main-top-padding);
+    }
+
+    @include respond(md) {
+        gap: 20px;
+    }
+
+    @include respond(lg) {
+        gap:25px;
+    }
+
+    @include respond(xl) {
+        gap:40px;
+    }
+}
