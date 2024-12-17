@@ -65,13 +65,13 @@ a {
 
     &.compact {
         @include respond(md) {
-            --left-sidebar-max-width: 25%;
+            --left-sidebar-max-width: 30%;
             max-width: 768px;
         }
 
         @include respond(lg) {
             max-width: 1024px;
-            --left-sidebar-max-width: 20%;
+            --left-sidebar-max-width: 25%;
         }
 
         @include respond(xl) {
