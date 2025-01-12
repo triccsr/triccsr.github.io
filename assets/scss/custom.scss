@@ -1,12 +1,20 @@
-:root{
+// modify some colors
+:root {
     --link-background-color: 0, 80, 180;
     --link-background-opacity: 0.7;
     --link-background-opacity-hover: 0.4;
-    --link-text-color:rgb(0, 80, 180);
-    --code-text-color:rgb(0,0,0);
-    &[data-scheme="dark"]{
+    --link-text-color: rgb(0, 80, 180);
+    --code-text-color: rgb(0, 0, 0);
+
+    --category-background: #7CB9E8;
+    --tag-background: #8FBC8F;
+
+    &[data-scheme="dark"] {
         --link-background-color: 150, 200, 255;
-        --link-text-color:rgb(150,200,255);
+        --link-text-color: rgb(150, 200, 255);
+
+        --category-background: #214fc6;
+        --tag-background: #00755e;
     }
 
     --body-background: #dddddd;
@@ -16,7 +24,9 @@
 
     --body-text-color: #40454a;
 
+    --tag-border-radius: 8px;
 
+    --card-border-radius: 16px;
     --card-background: #eeeeee;
     --card-background-selected: #e8e8e8;
 
@@ -24,25 +34,35 @@
     --card-separator-color: rgba(190, 192, 204, 0.5);
 
     --scrollbar-thumb: hsl(0, 0%, 60%);
+
+    --section-separation: 30px;
+
+
 }
+
 a {
     &.link {
         color: var(--link-text-color);
     }
 }
+
 [data-scheme="light"] {
     --pre-text-color: #272822;
     --pre-background-color: #f5f5f5;
 }
-.widget--toc{
+
+// shrink font size in toc bar
+.widget--toc {
     #TableOfContents {
         font-size: 1.4rem;
     }
 }
 
+//narrowlize sidebars on small screens
 .container {
     margin-left: auto;
     margin-right: auto;
+
     &.extended {
         @include respond(md) {
             max-width: 1024px;
@@ -79,16 +99,72 @@ a {
         }
     }
 }
+
+//narrowlize gap between main article and toc bar
 .main-container {
     @include respond(md) {
         gap: 20px;
     }
 
     @include respond(lg) {
-        gap:25px;
+        gap: 25px;
     }
 
     @include respond(xl) {
-        gap:40px;
+        gap: 40px;
+    }
+}
+
+// 2 column links
+@media (min-width: 1024px) {
+    .article-list--compact.links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: none;
+        box-shadow: none;
+        gap: 1rem;
+
+        article {
+            background: var(--card-background);
+            border: none;
+            box-shadow: none;
+            margin-bottom: 8px;
+            border-radius: var(--card-border-radius);
+
+            &:nth-child(odd) {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+//2 column archive
+// 归档页面两栏
+@media (min-width: 1024px) {
+    .article-list--compact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: none;
+        box-shadow: none;
+        gap: 1rem;
+
+        article {
+            background: var(--card-background);
+            border: none !important;
+            box-shadow: none;
+            margin-bottom: 8px;
+            border-radius: var(--card-border-radius);
+
+            &:nth-child(odd) {
+                margin-right: 8px;
+            }
+
+            .article-wrapper {
+                display: flex;
+                align-items: center;
+                padding: var(--small-card-padding);
+                gap: 15px;
+            }
+        }
     }
 }
