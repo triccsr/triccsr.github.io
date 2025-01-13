@@ -171,3 +171,18 @@ a {
     align-items: center;
     padding: var(--small-card-padding);
 }
+
+@include respond(xs) {
+    .article-list {
+        .article-time-wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+.article-time-wrapper {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}

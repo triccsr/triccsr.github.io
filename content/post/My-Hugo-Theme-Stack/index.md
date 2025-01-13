@@ -5,7 +5,7 @@ date : 2024-05-08T22:37:30+08:00
 url : 54b10acc
 categories: 
     - 技术
-tags: ["Hugo"]
+tags: ["Hugo","折腾"]
 ---
 ## 背景
 
@@ -405,17 +405,19 @@ tags同理。
 为了让 categories 和 tags 在文章列表里右侧显示，点开文章后左侧换行显示，我在`assets/scss/partials/article.scss`里新增了`.article-time-wrapper`。
 
 ```scss
-.article-time-wrapper {
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
+@include respond(xs) {
+    .article-list {
+        .article-time-wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 }
 
-.main-article {
-    .article-time-wrapper {
-        gap: 15px;
-        flex-direction: column;
-    }
+.article-time-wrapper {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
 }
 ```
 还要改动`layouts/partials/article/components/details.html`的`{{ if $showFooter }}`一段：
