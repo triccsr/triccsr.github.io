@@ -347,7 +347,7 @@ graph TD
 
 ### 代码字体
 
-可以在[](https://fonts.google.com)上选择字体，我使用了JetBrains Mono。
+可以在[fonts.google.com](https://fonts.google.com)上选择字体，我使用了JetBrains Mono。
 
 在站点文件夹（注意不是主题文件夹）下新建`layouts/partials/head/custom.html`。
 
@@ -355,7 +355,7 @@ graph TD
 <style>
     /* Overwrite CSS variable */
     :root {
-        --code-font-family: "JetBrains Mono";
+        --code-font-family: "JetBrains Mono"; /* 按需修改 */
     }
 
     code {
@@ -370,7 +370,7 @@ graph TD
 <script>
     (function () {
         const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@300;700&display=swap";
+        customFont.href = "https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@300;700&display=swap"; /* 按需修改 */
 
         customFont.type = "text/css";
         customFont.rel = "stylesheet";
