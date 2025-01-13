@@ -159,12 +159,15 @@ a {
                 margin-right: 8px;
             }
 
-            .article-wrapper {
-                display: flex;
-                align-items: center;
-                padding: var(--small-card-padding);
-                gap: 15px;
-            }
+            // .article-wrapper {
+            //     gap: 15px;
+            // }
         }
     }
+}
+
+.article-wrapper {
+    display: flex;
+    align-items: center;
+    padding: var(--small-card-padding);
 }
