@@ -8,6 +8,9 @@
 
     --category-background: #7CB9E8;
     --tag-background: #8FBC8F;
+    --pre-background-color: #1c1e1f;
+    --blockquote-background-color: #e4e7e9;
+    --code-background-color: #eaeaea;
 
     &[data-scheme="dark"] {
         --link-background-color: 150, 200, 255;
@@ -15,20 +18,26 @@
 
         --category-background: #214fc6;
         --tag-background: #00755e;
+        --body-background: #242729;
+        --code-background-color: #1c1e1f;
+        --card-background: #323638;
+        --blockquote-background-color: #383d40;
+        --accent-color: #e5f2ff;
+        --accent-color-darker: #62b8ff;
     }
 
-    --body-background: #dddddd;
+    --body-background: #e5e8ea;
 
     --accent-color: #21364b;
-    --accent-color-darker: #556d88;
+    --accent-color-darker: #0070bb;
 
     --body-text-color: #40454a;
 
     --tag-border-radius: 8px;
 
     --card-border-radius: 16px;
-    --card-background: #eeeeee;
-    --card-background-selected: #e8e8e8;
+    --card-background: #eef2f5;
+    --card-background-selected: #ffffff;
 
     --card-text-color-main: #222528;
     --card-separator-color: rgba(190, 192, 204, 0.5);
@@ -48,7 +57,7 @@ a {
 
 [data-scheme="light"] {
     --pre-text-color: #272822;
-    --pre-background-color: #f5f5f5;
+    --pre-background-color: #eaeaea;
 }
 
 // shrink font size in toc bar
@@ -141,7 +150,7 @@ a {
 //2 column archive
 // 归档页面两栏
 @media (min-width: 1024px) {
-    .article-list--compact {
+    .template-archives .article-list--compact {
         display: grid;
         grid-template-columns: 1fr 1fr;
         background: none;
@@ -186,3 +195,40 @@ a {
     gap: 15px;
     flex-direction: column;
 }
+
+.article-title>a,
+.article-time>a {
+    text-decoration: underline .1em rgba(0, 0, 0, 0);
+    transition: text-decoration-color .2s;
+    text-underline-offset: .2em;
+
+    &:hover {
+        text-decoration: underline .1em currentColor;
+        // transform: translateX(10px);
+    }
+}
+
+.article-time>a {
+    color: var(--card-text-color-tertiary);
+}
+
+.article-list--compact article .article-image {
+    &>img {
+        width: 80px;
+        height: var(--image-size);
+    }
+}
+
+.section-card .section-image {
+    img {
+        width: 80px;
+        height: 60px;
+    }
+}
+
+// .tagCloud-tags a {
+//     &:hover {
+//         transform: translateY(-4px);
+//         transition: transform .2s;
+//     }
+// }

@@ -8,7 +8,7 @@ tags:
     - XCPC
 categories: 
     - 网瘾
-
+image: "cover.jpg"
 ---
 
 ## 摘要

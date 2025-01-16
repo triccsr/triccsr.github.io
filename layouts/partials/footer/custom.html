@@ -1,0 +1,50 @@
+<style>
+    #TableOfContents>ul,
+    ol {
+
+        ul,
+        ol {
+            display: none;
+        }
+
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        // 判断是否存在文章目录
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        // 监听滚动
+        window.addEventListener('scroll', function () {
+            // 获取active-class
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            //清除class值
+            let elementsByClassName = document.querySelectorAll(".open");
+            if (elementsByClassName.length > 0) {
+                elementsByClassName.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
+            }
+            // 展示子ul
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            // 展示父ul
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
