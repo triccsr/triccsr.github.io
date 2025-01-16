@@ -212,11 +212,15 @@ a {
     color: var(--card-text-color-tertiary);
 }
 
-.article-list--compact article .article-image {
-    &>img {
-        width: 80px;
-        height: var(--image-size);
-    }
+.article-list--compact.links article .article-image>img {
+    width: var(--image-size);
+}
+
+.article-list--compact article .article-image>img {
+
+    width: calc(var(--image-size)*4/3);
+    height: var(--image-size);
+
 }
 
 .section-card .section-image {
