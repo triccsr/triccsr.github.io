@@ -4,7 +4,7 @@ languageCode = "en-us"
 # paginate = 5
 pagination.pagerSize = 8
 title = "Triccsr's Blog"
-
+# enableGitInfo = true
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
 defaultContentLanguage = "zh-cn"
@@ -17,4 +17,4 @@ hasCJKLanguage = true
 #disqusShortname = "hugo-theme-stack"
 
 [frontmatter]
-lastmod = [":fileModTime", "lastmod"]
+lastmod = [":fileModTime", "lastmod", ":default"]
