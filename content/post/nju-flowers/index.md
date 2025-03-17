@@ -447,6 +447,7 @@ tags:
 - 花梗短
 - 花白色或很浅的粉色
 - 花萼反折
+- 有奇怪的气味
 
 学校里我只在图书馆正门右侧见过两棵杏树。
 
@@ -486,7 +487,7 @@ tags:
 
 去年就看到新传院门口有白花绿萼的树，但看的时候快谢了，没看出来是什么花。
 
-今年又去看，发现花萼实际上带一点红色，有反折，且新传院楼西侧有几棵标准的红萼杏花，所以大概率是杏花。
+今年又去看，发现花萼实际上带一点红色，有反折，气味和图书馆附近的杏花相似，且新传院楼西侧有几棵标准的红萼杏花，所以大概率是杏花。
 
 （梅花也属于杏属，既然有绿萼梅，就不是不可能有绿萼杏）
 
@@ -572,7 +573,7 @@ tags:
 ### 2024.3.19 梦川快递站段 
 ![](迎春柳.jpg)
 
-### 2025.3.14 
+### 2025.3.14 梦川东侧，邮局桥
 
 网传金钟花花萼短，连翘花萼长。那这个应该是金钟花，明显花萼短于花瓣分裂处。
 
@@ -580,15 +581,32 @@ tags:
 
 ![](金钟花-1.jpg) ![](金钟花-2.jpg)
 
-## 毛樱桃?
+## 毛樱桃
 
-### 2025.3.14 梦川西侧，苏果路口北
+### 2025.3.14 梦川西侧，邮局桥北
 
-和一棵美人梅长在一起
-
-AI识图说是毛樱桃，但我没搞清这东西和山桃的区别
+和一棵美人梅长在一起。
 
 ![](毛樱桃-1.jpg) ![](毛樱桃-2.jpg)
+
+AI识图说是毛樱桃。一开始我没搞清毛樱桃和山桃的区别，于是上网查资料。
+
+以下是一些毛樱桃网图，都有标志性的粉色花心。
+
+[英文维基](https://en.wikipedia.org/wiki/Prunus_tomentosa)
+[中文维基](https://zh.wikipedia.org/wiki/%E6%AF%9B%E6%A8%B1%E6%A1%83)
+[搜狐](https://www.sohu.com/a/490705738_121225982)
+[小红书](https://www.xiaohongshu.com/discovery/item/67ce999b0000000029035edf?source=webshare&xhsshare=pc_web&xsec_token=AB-a104ouXzQrJqL1vaHuetA44fEi752chPESu2dIWJlE=&xsec_source=pc_share)
+[小红书](https://www.xiaohongshu.com/discovery/item/645914380000000013017096?source=webshare&xhsshare=pc_web&xsec_token=ABLgpzWFN1q6iPqiXPg58xXr2fxBKBCY7EPoOwWKx8otw=&xsec_source=pc_share)
+[小红书](https://www.xiaohongshu.com/discovery/item/642405b50000000027013350?source=webshare&xhsshare=pc_web&xsec_token=ABQj1SyFRK0IpK886UtuUa4FZOPuEu2fjX09Df3VGi-pw=&xsec_source=pc_share)
+
+小红书上有很多山桃照片，从照片可以看出红山桃花瓣浅粉色，花药和花萼深红色，和我拍到的花完全不像；而白山桃虽然和我拍到的花外形相似，但花心是绿色的。
+
+[红山桃](https://www.xiaohongshu.com/discovery/item/66b973f5000000001e019f0a?source=webshare&xhsshare=pc_web&xsec_token=ABgt1n4UggPFnkEBK4211JmW65fk6I1DeA2k_vaYyM5bM=&xsec_source=pc_share)
+
+[白山桃](https://www.xiaohongshu.com/discovery/item/67d78eb1000000001e00478c?source=webshare&xhsshare=pc_web&xsec_token=ABuk_vBx_IH1UhERFN1NVkT34P-AyteZhX-91BLVZFj8Y=&xsec_source=pc_share)
+
+[毛樱桃和白山桃的对比图](https://www.xiaohongshu.com/discovery/item/66101428000000001a00ccc8?source=webshare&xhsshare=pc_web&xsec_token=ABkFryngykZklRrnDxiE3nZ9tEMnzPoy5zKBT6_iqXfAM=&xsec_source=pc_share)
 
 ## 七姊妹
 
