@@ -22,6 +22,9 @@ links:
     image: https://qkoqhh.github.io/images/avatar.jpg
   - title: GGN_2015
     website: https://blog.csdn.net/ggn_2015
+  - title: pinkyhead
+    website: http://snewptl.com/
+
 menu:
     main: 
         weight: 4

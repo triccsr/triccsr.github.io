@@ -30,6 +30,9 @@ links:
     description: wbyakioi!
   - title: 被立生祠的基院院长hihi142
     website: https://hihi142.github.io/
+  - title: pinkyhead
+    website: http://snewptl.com/
+    image: http://snewptl.com/img/avatar3.jpg
 
 menu:
     main: 
