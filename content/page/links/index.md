@@ -32,7 +32,7 @@ links:
     website: https://hihi142.github.io/
   - title: pinkyhead
     website: http://snewptl.com/
-    image: http://snewptl.com/img/avatar3.jpg
+    image: snewptl.jpg
 
 menu:
     main: 
