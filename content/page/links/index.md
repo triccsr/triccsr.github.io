@@ -30,7 +30,7 @@ links:
     description: wbyakioi!
   - title: 被立生祠的基院院长hihi142
     website: https://hihi142.github.io/
-  - title: pinkyhead
+  - title: 努力上分但WAWA乱叫的截截
     website: http://snewptl.com/
     image: snewptl.jpg
 
