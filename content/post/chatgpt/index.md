@@ -2,6 +2,11 @@
 title : 'ChatGPT 充值指南'
 date : 2026-05-09T21:14:56+08:00
 url : 4e835aa0
+
+categories:
+  - 技术
+tags:
+    - 折腾
 ---
 
 众所周知ChatGPT理论上不允许中国用户使用，网页充值很有可能触发风控，我尝试用银行卡和paypal都失败了，所以用手机app充值。
