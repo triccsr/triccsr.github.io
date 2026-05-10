@@ -19,3 +19,5 @@ hasCJKLanguage = true
 
 enableGitInfo = true # use git info to generate lastmod date, according to https://gohugo.io/getting-started/configuration/#git
 
+[frontmatter]
+lastmod = ["lastmod", ":git", "date", "publishDate"]

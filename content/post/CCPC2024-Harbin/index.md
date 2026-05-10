@@ -1,11 +1,13 @@
 ---
 title : 'CCPC 2024 哈尔滨站 战犯寄录'
 date : 2024-10-20T20:04:03+08:00
+lastmod: '2025-01-16'
 draft : false
 url : 947b0acb
 math: true
 tags: 
     - XCPC
+    - 旅游
 categories: 
     - 网瘾
 image: "cover.jpg"

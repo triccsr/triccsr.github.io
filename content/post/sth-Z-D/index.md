@@ -1,7 +1,7 @@
 ---
 title : '我的高中数学老师和生物老师'
 date : 2024-12-02T15:56:08+08:00
-lastmod: "2024-12-05"
+lastmod: '2024-12-05'
 draft : false
 url : 3794472a
 math: true
